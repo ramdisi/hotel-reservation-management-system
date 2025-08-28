@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -12,5 +13,10 @@
             <Font name="Arial Rounded MT Bold" size="24.0" />
          </font>
       </Label>
+      <JFXButton fx:id="btnRoomManagement" layoutX="115.0" layoutY="109.0" onAction="#btnRoomManagementOnAction" prefHeight="49.0" prefWidth="150.0" style="-fx-background-color: #9db4c0;" text="Room Management">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
