@@ -126,7 +126,6 @@ public class RoomManagementFormController implements Initializable {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-
     }
 
     @Override

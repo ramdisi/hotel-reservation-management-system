@@ -68,7 +68,7 @@
             <Font name="Arial Rounded MT Bold" size="11.0" />
          </font>
       </Label>
-      <JFXRadioButton fx:id="unavailableRadio" layoutX="140.0" layoutY="416.0" text="Unavailibility">
+      <JFXRadioButton fx:id="unavailableRadio" layoutX="140.0" layoutY="416.0" text="Booked">
          <font>
             <Font name="Arial Rounded MT Bold" size="11.0" />
          </font>
