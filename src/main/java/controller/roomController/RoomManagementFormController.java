@@ -1,4 +1,4 @@
-package controller;
+package controller.roomController;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 
 public class RoomManagementFormController implements Initializable {
 
-    RoomManagementController roomManagementController;
+    RoomManagementService roomManagementService;
 
     ObservableList <RoomDetails> roomDetails = FXCollections.observableArrayList();
 
@@ -85,7 +85,7 @@ public class RoomManagementFormController implements Initializable {
         double pricePerNight = Double.parseDouble(txtPricePerNight.getText());
         String description = txtDescription.getText();
         String roomStatus = checkRoomStatus();
-        roomManagementController.addDetails(roomNumber,roomType,pricePerNight,description,roomStatus);
+        roomManagementService.addDetails(roomNumber,roomType,pricePerNight,description,roomStatus);
         loadRoomDetails();
 
     }
@@ -104,7 +104,7 @@ public class RoomManagementFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-        roomManagementController.deleteDetails(txtRoomNumber.getText());
+        roomManagementService.deleteDetails(txtRoomNumber.getText());
         loadRoomDetails();
     }
 
@@ -115,13 +115,13 @@ public class RoomManagementFormController implements Initializable {
         Double pricePerNight = Double.parseDouble(txtPricePerNight.getText());
         String description = txtDescription.getText();
         String roomStatus = checkRoomStatus();
-        roomManagementController.updateDetails(roomNumber,roomType,pricePerNight,description,roomStatus);
+        roomManagementService.updateDetails(roomNumber,roomType,pricePerNight,description,roomStatus);
         loadRoomDetails();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        roomManagementController = new RoomManagementController();
+        roomManagementService = new RoomManagementController();
 
 //        ------initialize roomTypeCombo-------
         ObservableList<String> roomTypes = FXCollections.observableArrayList(
@@ -152,7 +152,7 @@ public class RoomManagementFormController implements Initializable {
 
     private void loadRoomDetails(){
         roomDetails.clear();
-        roomDetails=roomManagementController.getDetails();
+        roomDetails=roomManagementService.getDetails();
         tblRoomDetails.setItems(roomDetails);
     }
 

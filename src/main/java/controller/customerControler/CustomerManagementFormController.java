@@ -1,9 +1,7 @@
-package controller;
+package controller.customerControler;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +12,6 @@ import javafx.scene.input.MouseEvent;
 import model.CustomerDetails;
 
 import java.net.URL;
-import java.sql.*;
 import java.util.ResourceBundle;
 
 public class CustomerManagementFormController implements Initializable {

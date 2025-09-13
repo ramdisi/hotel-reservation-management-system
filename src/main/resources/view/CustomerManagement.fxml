@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="582.0" prefWidth="997.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerManagementFormController">
+<AnchorPane prefHeight="582.0" prefWidth="997.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customerControler.CustomerManagementFormController">
     <children>
-        <TableView fx:id="tblRoomDetails" layoutX="384.0" layoutY="113.0" prefHeight="287.0" prefWidth="579.0">
+        <TableView fx:id="tblRoomDetails" layoutX="384.0" layoutY="113.0" onMouseClicked="#tbl_onClick_selectCustomerDetails" prefHeight="287.0" prefWidth="579.0">
             <columns>
                 <TableColumn fx:id="colCustomerName" prefWidth="114.5" text="Customer Name" />
                 <TableColumn fx:id="colEmail" prefWidth="213.5" text="Email" />
