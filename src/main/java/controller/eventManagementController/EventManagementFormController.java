@@ -65,7 +65,14 @@ public class EventManagementFormController implements Initializable {
 
     @FXML
     void btn_onAction_addEvent(ActionEvent event) {
-
+        eventManagementService.addEvent(new Event(
+                null,
+                txt_description.getText(),
+                cmb_hallBooked.getValue(),
+                date_from.getValue(),
+                date_to.getValue()
+        ));
+        loadTable();
     }
 
     @FXML
@@ -98,7 +105,7 @@ public class EventManagementFormController implements Initializable {
 
     private void loadTable() {
         col_description.setCellValueFactory(new PropertyValueFactory<>("description"));
-        col_eventID.setCellValueFactory(new PropertyValueFactory<>("eventID"));
+        col_eventID.setCellValueFactory(new PropertyValueFactory<>("ID"));
         col_from.setCellValueFactory(new PropertyValueFactory<>("from"));
         col_to.setCellValueFactory(new PropertyValueFactory<>("to"));
         col_hallBooked.setCellValueFactory(new PropertyValueFactory<>("hallBooked"));

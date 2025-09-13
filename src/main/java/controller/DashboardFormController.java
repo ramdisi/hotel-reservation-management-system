@@ -29,7 +29,7 @@ public class DashboardFormController {
         roomManagement.show();
     }
 
-    public void btnCustomerManagementOnAction(ActionEvent actionEvent) {
+    public void btn_onAction_eventManagement(ActionEvent actionEvent) {
         try {
             eventManagement.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/event-management-form.fxml"))));
         } catch (IOException e) {
@@ -40,7 +40,7 @@ public class DashboardFormController {
     }
 
     @FXML
-    void btn_onAction_eventManagement(ActionEvent event) {
+    void btnCustomerManagementOnAction(ActionEvent event) {
         try {
             customerManagement.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/CustomerManagement.fxml"))));
         } catch (IOException e) {
